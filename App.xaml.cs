@@ -7,6 +7,8 @@ namespace MauiAppHotel
         public App()
         {
             InitializeComponent();
+
+          
         }
 
         /*protected override Window CreateWindow(IActivationState? activationState)
@@ -16,8 +18,10 @@ namespace MauiAppHotel
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            var window = new Window(new AppShell());
+            // var window = new Window(new AppShell()); // usar create window
             //var window = base.CreateWindow(activationState);
+
+            var window = new Window(new NavigationPage(new Views.ContatacaoHospedagem()));
 
             window.Width = 480;
             window.Height = 700;

@@ -13,6 +13,9 @@ namespace MauiAppHotel
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("MonteCarlo-Regular.ttf", "MonteCarloRegular");
+                    fonts.AddFont("PassionsConflict-Regular.ttf", "PassionsConflictRegular");
+                    fonts.AddFont("Cookie-Regular.ttf", "CookieRegular");
                 });
 
 #if DEBUG

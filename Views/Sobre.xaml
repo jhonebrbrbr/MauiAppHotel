@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Gray200}">
+    
+    <VerticalStackLayout VerticalOptions="Center" 
+                         HorizontalOptions="Center" Padding="10">
+
+
+        <Label 
+            Text="SOBRE"
+            FontFamily="CookieRegular" 
+            FontSize="Large"/>
+            
+        <Label 
+            Text="Desenvolvido por: Jhonatan Alves Fonseca"
+             FontFamily="CookieRegular"
+             FontSize="Large"/>
+        <Label 
+            Text="Versão 0.0.1b"
+             FontFamily="CookieRegular" 
+             FontSize="Large"/>
+        <Label 
+            Text="© 2026"
+             FontFamily="CookieRegular" 
+             FontSize="Large"/>
+
+        <Button Text="Voltar" x:Name="btn_voltar" Clicked="btn_voltar_Clicked" 
+                        Margin="6" Padding="10"
+                        BackgroundColor="{StaticResource Tertiary}" HorizontalOptions="Start"/>
+    </VerticalStackLayout>
+
+
+</ContentPage>
