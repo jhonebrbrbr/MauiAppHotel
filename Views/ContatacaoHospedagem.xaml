@@ -54,7 +54,7 @@
                     <VerticalStackLayout>
                         <Label Text="ESCOLHA SUA SUÍTE"/>
 
-                        <Picker x:Name="pck_quarto" Title="Selecione Sua acomodação" />
+                        <Picker x:Name="pck_quarto" Title="Selecione Sua acomodação" ItemDisplayBinding="{Binding Descricao}" />
                     </VerticalStackLayout>
                 </Border>
 
@@ -66,7 +66,8 @@
                                 <Label Text="Check-in: " />
                                 <DatePicker x:Name="dtpck_chekin"
                                                 Format="dd/MM/yyyy"
-                                            Grid.Row="0" Grid.Column="1"/>
+                                            Grid.Row="0" Grid.Column="1"
+                                            DateSelected="dtpck_chekin_DateSelected"/>
              
                                 <Label Text="Check-out: " Grid.Row="1" Grid.Column="0"/>
                                 <DatePicker x:Name="dtpck_chekout"
@@ -75,7 +76,7 @@
                         </Grid>
                     </VerticalStackLayout>
                 </Border>
-                <Button Text="Avançar" Margin="6" Padding="10" />
+                <Button Text="Avançar" Margin="6" Padding="10" x:Name="btn_avancar" Clicked="btn_avancar_clicked"/>
             </VerticalStackLayout>
         </Border>
     </VerticalStackLayout>
