@@ -9,11 +9,14 @@
     <VerticalStackLayout VerticalOptions="Center" 
                          HorizontalOptions="Center" Padding="10">
 
-        <Button Text="Sobre" x:Name="btn_sobre" Clicked="btn_sobre_Clicked" 
+        <HorizontalStackLayout>
+            <Button Text="Sobre" x:Name="btn_sobre" Clicked="btn_sobre_Clicked" 
                         Margin="6" Padding="10"
                         BackgroundColor="{StaticResource Tertiary}" HorizontalOptions="Start"/>
+            <Image Source="twinbrothers.jpg" HorizontalOptions="End" Visual="Default" HeightRequest="100" WidthRequest="100"/>
+            </HorizontalStackLayout>
 
-        <Label 
+                <Label 
             Text="Cáulculo da diária"
             FontFamily="CookieRegular" 
             FontSize="50"

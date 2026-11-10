@@ -55,7 +55,7 @@ public partial class ContatacaoHospedagem : ContentPage
 
         DateTime data_selecionada_checkin = elemento.Date.Value;
 
-        dtpck_chekin.MinimumDate = data_selecionada_checkin.AddDays(1);
+        dtpck_chekout.MinimumDate = data_selecionada_checkin.AddDays(1);
 
         dtpck_chekout.MaximumDate = data_selecionada_checkin.AddMonths(6);
     }

@@ -9,26 +9,47 @@
     <VerticalStackLayout VerticalOptions="Center" 
                          HorizontalOptions="Center" Padding="10">
 
-
-        <Label 
+        <HorizontalStackLayout>
+            <Label 
             Text="SOBRE"
             FontFamily="CookieRegular" 
-            FontSize="Large"/>
+            FontSize="Large"
+            Padding="16"/>
+
+
+            <!-- Fonte da imagem : https://www.magnific.com/free-vector/hand-drawn-friends-cartoon-illustration_45199925.htm -->
+            <Image Source="twinbrothers.jpg" HorizontalOptions="End" Visual="Default" HeightRequest="100" WidthRequest="100"/>
+        </HorizontalStackLayout>
+
+        <Label
+            Text="O Hotel Dois Irmãos Foi fundado em 1980 por João e José da Familia Silva na cidade de Tagamandapio, visamos atender desde o cliente mais exigente até aquele que não dispõe de maiores condições financeiras"
+          FontFamily="CookieRegular" 
+          FontSize="Medium"
             
-        <Label 
+          LineBreakMode="WordWrap"
+          MaximumWidthRequest="400"/>
+
+        <HorizontalStackLayout Padding="16">
+            <Label 
             Text="Desenvolvido por: Jhonatan Alves Fonseca"
              FontFamily="CookieRegular"
-             FontSize="Large"/>
-        <Label 
-            Text="Versão 0.0.1b"
-             FontFamily="CookieRegular" 
-             FontSize="Large"/>
-        <Label 
-            Text="© 2026"
-             FontFamily="CookieRegular" 
-             FontSize="Large"/>
+             FontSize="Small"
+             FontAttributes="Italic"/>
 
-        <Button Text="Voltar" x:Name="btn_voltar" Clicked="btn_voltar_Clicked" 
+                <Label 
+            Text=" Versão 0.0.1b "
+             FontFamily="CookieRegular" 
+             FontSize="Small"
+             FontAttributes="Italic"/>
+
+                <Label 
+            Text=" © 2026"
+             FontFamily="CookieRegular" 
+             FontSize="Small"
+             FontAttributes="Italic"/>
+        </HorizontalStackLayout>
+
+                <Button Text="Voltar" x:Name="btn_voltar" Clicked="btn_voltar_Clicked" 
                         Margin="6" Padding="10"
                         BackgroundColor="{StaticResource Tertiary}" HorizontalOptions="Start"/>
     </VerticalStackLayout>
