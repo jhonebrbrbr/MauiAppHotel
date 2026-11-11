@@ -1,3 +1,5 @@
+using MauiAppHotel.Models;
+
 namespace MauiAppHotel.Views;
 
 public partial class ContatacaoHospedagem : ContentPage
@@ -34,15 +36,28 @@ public partial class ContatacaoHospedagem : ContentPage
 
     }
 
-    private void btn_avancar_clicked(object sender, EventArgs e)
+    private async void btn_avancar_clicked(object sender, EventArgs e)
     {
         try
         {
-            Application.Current.Windows[0].Page = new HospedagemContratada();
+            Hospedagem h = new Hospedagem 
+            {            
+                QuartoSelecionado = (Quarto)pck_quarto.SelectedItem,
+                QtdAdultos = Convert.ToInt32(stp_adultos.Value),
+                QtdCriancas = Convert.ToInt32(stp_criancas.Value),
+                DataCheckin = dtpck_chekin.Date.Value,
+                DataCheckout = dtpck_chekout.Date.Value
+            };
+
+            Application.Current.Windows[0].Page = new HospedagemContratada()
+            {
+                BindingContext = h
+
+            };
         }
         catch (Exception ex)
         {
-            DisplayAlertAsync("Erro", $"Ocorreu um erro ao navegar para a página HospedagemContratada: {ex.Message}", "OK");
+            await DisplayAlertAsync("Erro", $"Ocorreu um erro ao navegar para a página HospedagemContratada: {ex.Message}", "OK");
         }
 
 

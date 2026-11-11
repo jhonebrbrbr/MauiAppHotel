@@ -8,7 +8,7 @@
     <VerticalStackLayout VerticalOptions="Center" 
                          HorizontalOptions="Center" Padding="10">
 
-        <Label Text="" TextColor="{StaticResource Black}"
+        <Label Text="{Binding QuartoSelecionado.Descricao}" TextColor="{StaticResource Black}"
                FontFamily="CookieRegular"
                FontSize="50"
                HorizontalTextAlignment="Center"/>
@@ -16,26 +16,26 @@
         <Border Margin="10" Padding="10">
             <HorizontalStackLayout>
                 <HorizontalStackLayout>
-                    <Label Text="Adultos: "/>
-                    <Label Text="" TextColor="{StaticResource PrimaryDarkText}"/>
+                    <Label Text="Adultos: " Padding="4"/>
+                    <Label Text="{Binding QtdAdultos}" TextColor="{StaticResource PrimaryDarkText}" Padding="4"/>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout>
-                    <Label Text="Crianças: "/>
-                    <Label Text="" TextColor="{StaticResource SecondaryDarkText}"/>
+                    <Label Text="Crianças: " Padding="4"/>
+                    <Label Text="{Binding QtdCriancas}" TextColor="{StaticResource SecondaryDarkText}" Padding="4"/>
                 </HorizontalStackLayout>
                 
             </HorizontalStackLayout>
         </Border>
 
         <Border>
-            <Grid ColumnDefinitions="*, * , *" RowDefinitions="Auto, Auto">
-                <Label Grid.Row="0" Grid.Column="0" Text="Data de Check-in: "/>
-                <Label Grid.Row="0" Grid.Column="1" Text="Data de Check-out: " TextColor="{StaticResource PrimaryDarkText}"/>
-                <Label Grid.Row="0" Grid.Column="2" Text="Estadia: " TextColor="{StaticResource Tertiary}"/>
+            <Grid ColumnDefinitions="auto, auto , auto" RowDefinitions="Auto, Auto">
+                <Label Grid.Row="0" Grid.Column="0" Text=" Data de Check-in: " Padding="4"/>
+                <Label Grid.Row="0" Grid.Column="1" Text=" Data de Check-out: " Padding="4" TextColor="{StaticResource PrimaryDarkText}"/>
+                <Label Grid.Row="0" Grid.Column="2" Text=" Estadia: " Padding="4" TextColor="{StaticResource Tertiary}"/>
 
-                <Label Grid.Row="1" Grid.Column="0" Text=""/>
-                <Label Grid.Row="1" Grid.Column="1" Text="" TextColor="{StaticResource PrimaryDarkText}"/>
-                <Label Grid.Row="1" Grid.Column="2" Text="" TextColor="{StaticResource Tertiary}"/>
+                <Label Grid.Row="1" Grid.Column="0" Padding="4" Text="{Binding DataCheckin, StringFormat='{0:dd/MM/yyyy}'}"/>
+                <Label Grid.Row="1" Grid.Column="1" Padding="4" Text="{Binding DataCheckout, StringFormat='{0:dd/MM/yyyy}'}" TextColor="{StaticResource PrimaryDarkText}"/>
+                <Label Grid.Row="1" Grid.Column="2" Padding="4" Text="{Binding Estadia}" TextColor="{StaticResource Tertiary}"/>
             </Grid>
         </Border>
 
@@ -43,7 +43,7 @@
             <HorizontalStackLayout>
                 <Label Text="Valor Total R$ "/>
 
-                <Label Text="" TextColor="{StaticResource PrimaryDarkText}"/>
+                <Label Text="{Binding ValorTotal, StringFormat='{0:F2}'}" TextColor="{StaticResource PrimaryDarkText}"/>
             </HorizontalStackLayout>
 
         </Border>

@@ -13,8 +13,10 @@
             <Button Text="Sobre" x:Name="btn_sobre" Clicked="btn_sobre_Clicked" 
                         Margin="6" Padding="10"
                         BackgroundColor="{StaticResource Tertiary}" HorizontalOptions="Start"/>
-            <Image Source="twinbrothers.jpg" HorizontalOptions="End" Visual="Default" HeightRequest="100" WidthRequest="100"/>
-            </HorizontalStackLayout>
+            <Image Source="twinbrothers.jpg" HorizontalOptions="End" Visual="Default" HeightRequest="100" WidthRequest="100" Margin="8"/>
+            <Label Text="Hotel Dois Irmãos" FontSize="20" FontAttributes="Bold" 
+                   MaximumWidthRequest="100" LineBreakMode="WordWrap" Padding="8"/>
+        </HorizontalStackLayout>
 
                 <Label 
             Text="Cáulculo da diária"
@@ -57,7 +59,7 @@
                     <VerticalStackLayout>
                         <Label Text="ESCOLHA SUA SUÍTE"/>
 
-                        <Picker x:Name="pck_quarto" Title="Selecione Sua acomodação" ItemDisplayBinding="{Binding Descricao}" />
+                        <Picker x:Name="pck_quarto" Title="Selecione Sua acomodação" ItemDisplayBinding="{Binding Descricao}"/>
                     </VerticalStackLayout>
                 </Border>
 
